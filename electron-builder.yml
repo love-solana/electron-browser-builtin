@@ -1,0 +1,19 @@
+appId: com.yuser1.electron-browser-builtin
+productName: Electron Browser Builtin
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**
+  - package.json
+asar: true
+win:
+  target:
+    - nsis
+    - portable
+portable:
+  artifactName: ${productName}-${version}-portable.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  artifactName: ${productName}-${version}-setup.${ext}
